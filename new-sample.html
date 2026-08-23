@@ -172,8 +172,7 @@
   <script>
 	const SUPABASE_URL = "https://ndiltdoguobelvcdmhms.supabase.co";
 	const SUPABASE_KEY = "sb_publishable_AgCVjaXgVRvooqCphASxZA_YAauoLe4";
-    const STORAGE_BUCKET = "ecotera_home_beta_001";
-    const TABLE_NAME = "samples";
+
 
     const supabaseClient = window.supabase.createClient(
       SUPABASE_URL,
@@ -606,7 +605,7 @@
 
       const { error } =
         await supabaseClient.storage
-          .from(STORAGE_BUCKET)
+       .from(currentKit.storage_bucket)
           .upload(
             path,
             file,
